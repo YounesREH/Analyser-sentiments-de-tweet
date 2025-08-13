@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 public class HelloController {
     @FXML
     private Label outputLabel;
-    // ProcessBuilder pb = new ProcessBuilder("python", "C:/Users/yyoun/Desktop/machine learning/SentimentAnalysis.py", textarea.getText());
+    // ProcessBuilder pb = new ProcessBuilder("python", "SentimentAnalysis.py", textarea.getText());
     @FXML
     private TextArea textarea;
 
@@ -26,7 +26,7 @@ public class HelloController {
             }
 
             // استدعاء بايثون وتمرير النص
-            ProcessBuilder pb = new ProcessBuilder("python", "C:/Users/yyoun/Desktop/machine learning/prsn.py", textarea.getText());
+            ProcessBuilder pb = new ProcessBuilder("python", "machine learning/prsn.py", textarea.getText());
             pb.redirectErrorStream(true);
             Process process = pb.start();
 
