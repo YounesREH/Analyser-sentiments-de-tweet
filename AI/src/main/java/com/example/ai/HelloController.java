@@ -26,7 +26,7 @@ public class HelloController {
             }
 
             // استدعاء بايثون وتمرير النص
-            ProcessBuilder pb = new ProcessBuilder("python", "machine learning/prsn.py", textarea.getText());
+            ProcessBuilder pb = new ProcessBuilder("python", "prsn.py", textarea.getText());
             pb.redirectErrorStream(true);
             Process process = pb.start();
 
