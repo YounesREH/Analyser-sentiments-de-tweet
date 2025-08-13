@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 public class HelloController {
     @FXML
     private Label outputLabel;
-    // ProcessBuilder pb = new ProcessBuilder("python", "SentimentAnalysis.py", textarea.getText());
+
     @FXML
     private TextArea textarea;
 
@@ -42,8 +42,8 @@ public class HelloController {
             System.out.println(output.toString());
 
         } catch (Exception e) {
-            outputLabel.setText("حدث خطأ: " + e.getMessage());
-            System.out.println(e.getMessage());
+            outputLabel.setText(e.getMessage());
+            
         }
     }
     @FXML
