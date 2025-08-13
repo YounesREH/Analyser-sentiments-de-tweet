@@ -25,12 +25,12 @@ public class HelloController {
                 return;
             }
 
-            // استدعاء بايثون وتمرير النص
+            
             ProcessBuilder pb = new ProcessBuilder("python", "prsn.py", textarea.getText());
             pb.redirectErrorStream(true);
             Process process = pb.start();
 
-            // قراءة النتيجة
+            
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream(), "UTF-8"));
             String line;
             StringBuilder output = new StringBuilder();
